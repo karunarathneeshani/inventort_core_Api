@@ -95,7 +95,7 @@ router.get('/getAllItem', function(req, res) {
 
 router.post('/showReportItem', function(req, res) {
 
-    var n = parseInt(req.body.itemId);
+    var n = req.body.itemId;
     console.log(n);
     MiddleTermItem.getItemByItemId(n, (err, item) => {
 
